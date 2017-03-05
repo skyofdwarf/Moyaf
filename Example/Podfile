@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'Moyaf_Example' do
+  pod 'Moyaf', :path => '../'
+
+  target 'Moyaf_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
