@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MoyafApi.h"
 #import "MoyafResult.h"
-
-#import "AFNetworking.h"
-
+#import <AFNetworking/AFNetworking.h>
 
 #pragma mark - MoyafRequestCanceller
 

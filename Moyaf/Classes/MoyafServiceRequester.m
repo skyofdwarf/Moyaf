@@ -7,7 +7,6 @@
 //
 
 #import "MoyafServiceRequester.h"
-#import "AFNetworking.h"
 
 
 #pragma mark - MoyafServiceRequest()r
