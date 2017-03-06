@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/Moyaf.svg?style=flat)](http://cocoapods.org/pods/Moyaf)
 [![Platform](https://img.shields.io/cocoapods/p/Moyaf.svg?style=flat)](http://cocoapods.org/pods/Moyaf)
 
+**WARN**: _I'm not a native._ 😬
+
+Moyaf is abstraction layer based on [AFNetworking](https://github.com/AFNetworking/AFNetworking) and for someone like me who sitting yet on Objective-C.
+
+It's inspired by [Moya](https://github.com/Moya/Moya) for [Alamofire](https://github.com/Alamofire/Alamofire).
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
