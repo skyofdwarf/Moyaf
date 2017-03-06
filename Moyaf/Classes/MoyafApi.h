@@ -42,11 +42,11 @@ typedef NS_ENUM(NSInteger, MoyafApiMethodType) {
 
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
-								  path:(nonnull NSString *)path NS_DESIGNATED_INITIALIZER;
+								  path:(nonnull NSString *)path;
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
 								  path:(nonnull NSString *)path
-							parameters:(nullable NSDictionary *)parameters NS_DESIGNATED_INITIALIZER;
+							parameters:(nullable NSDictionary *)parameters;
 
 - (nullable id)parseFromJson:(nullable id)json;
 - (nullable id)mock;

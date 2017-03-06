@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Moyaf'
   s.version          = '0.8.0'
-  s.summary          = 'A short description of Moyaf.'
+  s.summary          = 'Simple abstraction layer based on AFNetworking.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Moyaf is abstraction layer based on AFNetworking and for someone like me who sitting yet on Objective-C.
+It's inspired by Moya for Alamofire.
                        DESC
 
   s.homepage         = 'https://github.com/skyofdwarf/Moyaf'

@@ -40,8 +40,8 @@
 @interface MoyafService : NSObject <MoyafServiceProtocol>
 @property (strong, nonatomic, nonnull, readonly) id<MoyafServiceRequesterProtocol> requester;
 
-- (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl NS_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithRequester:(nonnull id<MoyafServiceRequesterProtocol>)requester NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl;
+- (nonnull instancetype)initWithRequester:(nonnull id<MoyafServiceRequesterProtocol>)requester;
 
 - (nullable MoyafRequestCanceller)requestWithApi:(nonnull id<MoyafApiProtocol>)api
 									  completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion

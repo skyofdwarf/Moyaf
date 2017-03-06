@@ -19,6 +19,12 @@
 @end
 
 @implementation MoyafApi
+
+- (nonnull instancetype)init {
+	return [self initWithMethod:MoyafApiMethodGet
+						   path:@""
+					 parameters:nil];
+}
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
 								  path:(nonnull NSString *)path {
 	return [self initWithMethod:method
