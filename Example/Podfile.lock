@@ -1,0 +1,39 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Expecta (1.0.5)
+  - Moyaf (0.8.0):
+    - AFNetworking (~> 3.1)
+  - Specta (1.0.6)
+
+DEPENDENCIES:
+  - Expecta
+  - Moyaf (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  Moyaf:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Moyaf: 519108c7d4f6d778b43cf2b319fb4256481bab55
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+
+PODFILE CHECKSUM: 1e501e96dfc1b6e22600bb9cab05b4b3b284fbc3
+
+COCOAPODS: 1.1.1

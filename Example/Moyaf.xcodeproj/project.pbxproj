@@ -38,10 +38,10 @@
 
 /* Begin PBXFileReference section */
 		0DF4173AEAC5556BFEE1D41D /* Pods_Moyaf_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moyaf_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1280A4038D227F7DBD1FDDC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1280A4038D227F7DBD1FDDC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		197EAABA07D6DE28F33D60FE /* Pods_Moyaf_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moyaf_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DE44A13C46DBECA82B1DE3 /* Pods-Moyaf_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moyaf_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moyaf_Tests/Pods-Moyaf_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		43AA69FA3F1B8B32414D37EB /* Moyaf.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Moyaf.podspec; path = ../Moyaf.podspec; sourceTree = "<group>"; };
+		43AA69FA3F1B8B32414D37EB /* Moyaf.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Moyaf.podspec; path = ../Moyaf.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Moyaf_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moyaf_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87E453BF3D3DE5E95936D11F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		87E453BF3D3DE5E95936D11F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9264EFC67DBBAE15E2201803 /* Pods-Moyaf_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moyaf_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moyaf_Example/Pods-Moyaf_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1C5BD6986D30342172F5903 /* Pods-Moyaf_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moyaf_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moyaf_Example/Pods-Moyaf_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E6DB6DC2A419AC96633DB379 /* Pods-Moyaf_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moyaf_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moyaf_Tests/Pods-Moyaf_Tests.debug.xcconfig"; sourceTree = "<group>"; };
