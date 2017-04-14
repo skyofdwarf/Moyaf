@@ -20,10 +20,8 @@
 
 @implementation MoyafApi
 
-- (nonnull instancetype)init {
-    return [self initWithMethod:MoyafApiMethodGet
-                           path:@""
-                     parameters:nil];
+- (nullable instancetype)init NS_UNAVAILABLE {
+    return nil;
 }
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
                                   path:(nonnull NSString *)path {

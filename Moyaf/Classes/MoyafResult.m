@@ -43,12 +43,9 @@ NSString *const _Nonnull MoyafErrorDomain = @"MoyafErrorDomain";
     return [[MoyafResult alloc] initWithError:error];
 }
 
-- (nonnull instancetype)init {
-    return [self initWithError:[NSError errorWithDomain:MoyafErrorDomain
-                                                   code:MoyafErrorUnknown
-                                               userInfo:nil]];
+- (nullable instancetype)init NS_UNAVAILABLE {
+    return nil;
 }
-
 
 - (nonnull instancetype)initWithValue:(nonnull id)value {
     if (value) {

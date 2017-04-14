@@ -7,6 +7,9 @@
 //
 
 #import "MoyafViewController.h"
+#import "PixabayImageApi.h"
+#import "PixabayVideoApi.h"
+#import "PixabayService.h"
 
 @interface MoyafViewController ()
 
@@ -18,6 +21,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self test];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +31,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)test {
+    PixabayImageApi *image = [[PixabayImageApi alloc] initWithCategory:@"people" query:nil];
+    PixabayService *service = [PixabayService new];
+    
+    [service requestWithApi:image
+                 completion:^(MoyafResult * _Nonnull result) {
+                     NSLog(@"result: %@", result);
+                 } failure:^(NSError * _Nonnull error) {
+                     NSLog(@"error: %@", error);
+                 }];
+}
 @end

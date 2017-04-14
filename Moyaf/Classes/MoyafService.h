@@ -27,14 +27,6 @@
 @end
 
 
-#pragma mark - RxMoyafServiceProtocol
-/*
- @protocol RxMoyafServiceProtocol <MoyafServiceProtocol>
- - (RACSignal * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
- @end
- */
-
-
 #pragma mark - MoyafService
 
 @interface MoyafService : NSObject <MoyafServiceProtocol>
@@ -48,12 +40,4 @@
                                          failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
 
 @end
-
-
-#pragma mark - MoyafService(Rx)
-/*
- @interface MoyafService(Rx) <RxMoyafServiceProtocol>
- - (RACSignal<MoyafResult *> * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
- @end
- */
 

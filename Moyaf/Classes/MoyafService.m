@@ -21,16 +21,12 @@
 
 @implementation MoyafService
 
-- (nonnull instancetype)init {
-    self = [super init];
-    if (self) {
-        self.requester = [[MoyafServiceRequester alloc] init];
-    }
-    
-    return self;
+- (nullable instancetype)init UNAVAILABLE_ATTRIBUTE {
+    return nil;
 }
 
 - (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl {
+    NSParameterAssert(baseUrl);
     self = [super init];
     if (self) {
         self.requester = [[MoyafServiceRequester alloc] initWithBaseUrl:baseUrl];
