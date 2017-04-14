@@ -19,8 +19,8 @@
 @protocol MoyafServiceProtocol
 @required
 - (nullable MoyafRequestCanceller)requestWithApi:(nonnull id<MoyafApiProtocol>)api
-									  completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
-										 failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
+                                      completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
+                                         failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
 @optional
 - (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl;
 - (nonnull instancetype)initWithRequester:(nonnull id<MoyafServiceRequesterProtocol>)requester;
@@ -29,10 +29,10 @@
 
 #pragma mark - RxMoyafServiceProtocol
 /*
-@protocol RxMoyafServiceProtocol <MoyafServiceProtocol>
-- (RACSignal * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
-@end
-*/
+ @protocol RxMoyafServiceProtocol <MoyafServiceProtocol>
+ - (RACSignal * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
+ @end
+ */
 
 
 #pragma mark - MoyafService
@@ -44,16 +44,16 @@
 - (nonnull instancetype)initWithRequester:(nonnull id<MoyafServiceRequesterProtocol>)requester;
 
 - (nullable MoyafRequestCanceller)requestWithApi:(nonnull id<MoyafApiProtocol>)api
-									  completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
-										 failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
+                                      completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
+                                         failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
 
 @end
 
 
 #pragma mark - MoyafService(Rx)
 /*
-@interface MoyafService(Rx) <RxMoyafServiceProtocol>
-- (RACSignal<MoyafResult *> * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
-@end
-*/
+ @interface MoyafService(Rx) <RxMoyafServiceProtocol>
+ - (RACSignal<MoyafResult *> * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api;
+ @end
+ */
 

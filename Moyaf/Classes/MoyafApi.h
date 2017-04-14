@@ -12,8 +12,8 @@
 #pragma mark - MoyafApiMethodType
 
 typedef NS_ENUM(NSInteger, MoyafApiMethodType) {
-	MoyafApiMethodGet,
-	MoyafApiMethodPost
+    MoyafApiMethodGet,
+    MoyafApiMethodPost
 };
 
 
@@ -42,11 +42,11 @@ typedef NS_ENUM(NSInteger, MoyafApiMethodType) {
 
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
-								  path:(nonnull NSString *)path;
+                                  path:(nonnull NSString *)path;
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
-								  path:(nonnull NSString *)path
-							parameters:(nullable NSDictionary *)parameters;
+                                  path:(nonnull NSString *)path
+                            parameters:(nullable NSDictionary *)parameters;
 
 - (nullable id)parseFromJson:(nullable id)json;
 - (nullable id)mock;

@@ -22,61 +22,60 @@
 @implementation MoyafService
 
 - (nonnull instancetype)init {
-	self = [super init];
-	if (self) {
-		self.requester = [[MoyafServiceRequester alloc] init];
-	}
-	
-	return self;
+    self = [super init];
+    if (self) {
+        self.requester = [[MoyafServiceRequester alloc] init];
+    }
+    
+    return self;
 }
 
 - (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl {
-	self = [super init];
-	if (self) {
-		self.requester = [[MoyafServiceRequester alloc] initWithBaseUrl:baseUrl];
-	}
-	
-	return self;
+    self = [super init];
+    if (self) {
+        self.requester = [[MoyafServiceRequester alloc] initWithBaseUrl:baseUrl];
+    }
+    
+    return self;
 }
 
 - (nonnull instancetype)initWithRequester:(nonnull id<MoyafServiceRequesterProtocol>)requester {
-	self = [super init];
-	if (self) {
-		self.requester = requester;
-	}
-	
-	return self;
+    self = [super init];
+    if (self) {
+        self.requester = requester;
+    }
+    
+    return self;
 }
 
 - (nullable MoyafRequestCanceller)requestWithApi:(nonnull id<MoyafApiProtocol>)api
-									  completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
-										 failure:(void (^ _Nullable)(NSError * _Nonnull error))failure {
-	return [self.requester requestWithApi:api completion:completion failure:failure];
+                                      completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
+                                         failure:(void (^ _Nullable)(NSError * _Nonnull error))failure {
+    return [self.requester requestWithApi:api completion:completion failure:failure];
 }
 
 @end
 
-
-#pragma mark - MoyafService(Rx)
 /*
+#pragma mark - MoyafService(Rx)
+
 @implementation MoyafService(Rx)
 - (RACSignal<MoyafResult *> * _Nonnull)requestWithApi:(id<MoyafApiProtocol> _Nonnull)api {
-	typeof(self) __weak wself = self;
-	return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-		MoyafRequestCanceller _Nullable canceller = [wself.requester requestWithApi:api completion:^(MoyafResult * _Nonnull result) {
-			[subscriber sendNext:result];
-			[subscriber sendCompleted];
-		} failure:^(NSError * _Nonnull error) {
-			[subscriber sendError:error];
-		}];
-		
-		return [RACDisposable disposableWithBlock:^{
-			if (canceller)
-				canceller();
-		}];
-	}] replayLast];
-
+    typeof(self) __weak wself = self;
+    return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        MoyafRequestCanceller _Nullable canceller = [wself.requester requestWithApi:api completion:^(MoyafResult * _Nonnull result) {
+            [subscriber sendNext:result];
+            [subscriber sendCompleted];
+        } failure:^(NSError * _Nonnull error) {
+            [subscriber sendError:error];
+        }];
+        
+        return [RACDisposable disposableWithBlock:^{
+            if (canceller)
+                canceller();
+        }];
+    }] replayLast];
+    
 }
 @end
 */
-

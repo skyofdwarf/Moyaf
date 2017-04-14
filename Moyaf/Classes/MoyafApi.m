@@ -21,35 +21,35 @@
 @implementation MoyafApi
 
 - (nonnull instancetype)init {
-	return [self initWithMethod:MoyafApiMethodGet
-						   path:@""
-					 parameters:nil];
+    return [self initWithMethod:MoyafApiMethodGet
+                           path:@""
+                     parameters:nil];
 }
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
-								  path:(nonnull NSString *)path {
-	return [self initWithMethod:method
-						   path:path
-					 parameters:nil];
+                                  path:(nonnull NSString *)path {
+    return [self initWithMethod:method
+                           path:path
+                     parameters:nil];
 }
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
-								  path:(nonnull NSString *)path
-							parameters:(nullable NSDictionary *)parameters {
-	self = [super init];
-	if (self) {
-		self.method = method;
-		self.path = path;
-		self.parameters = parameters;
-	}
-	return self;
+                                  path:(nonnull NSString *)path
+                            parameters:(nullable NSDictionary *)parameters {
+    self = [super init];
+    if (self) {
+        self.method = method;
+        self.path = path;
+        self.parameters = parameters;
+    }
+    return self;
 }
 
 - (nullable id)parseFromJson:(nullable id)json {
-	return nil;
+    return nil;
 }
 
 - (nullable id)mock {
-	return @{};
+    return @{};
 }
 
 @end

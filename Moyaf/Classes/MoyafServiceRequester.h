@@ -21,8 +21,8 @@ typedef void (^MoyafRequestCanceller)();
 @protocol MoyafServiceRequesterProtocol
 
 - (nullable MoyafRequestCanceller)requestWithApi:(nonnull id<MoyafApiProtocol>)api
-									  completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
-										 failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
+                                      completion:(void (^ _Nullable) (MoyafResult * _Nonnull result))completion
+                                         failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
 @end
 
 

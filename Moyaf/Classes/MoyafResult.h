@@ -18,9 +18,9 @@ extern NSString *const _Nonnull MoyafErrorDomain;
 #pragma mark - MoyafErrorCodeType
 
 typedef NS_ENUM(NSInteger, MoyafErrorCodeType) {
-	MoyafErrorSuccess = 0,
-	MoyafErrorUnknown = 1,
-	MoyafErrorParseError = 2
+    MoyafErrorSuccess = 0,
+    MoyafErrorUnknown = 1,
+    MoyafErrorParseError = 2
 };
 
 
