@@ -10,10 +10,6 @@
 
 @implementation PixabayImageApi
 
-- (nonnull instancetype)init {
-    return [self initWithCategory:@"" query:@""];
-}
-
 - (nonnull instancetype)initWithCategory:(NSString *_Nullable)category query:(NSString * _Nullable)query {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"pretty": @"true" }];
     [params setValue:category forKey:@"category"];

@@ -44,10 +44,12 @@ NSString *const _Nonnull MoyafErrorDomain = @"MoyafErrorDomain";
 }
 
 - (nullable instancetype)init NS_UNAVAILABLE {
+    [NSException raise:@"MoyafExceptionNonAvailableInitializer" format:@"you need to use designated initializers"];
     return nil;
 }
 
 - (nonnull instancetype)initWithValue:(nonnull id)value {
+    NSParameterAssert(value);
     if (value) {
         self = [super init];
         if (self) {
@@ -56,25 +58,20 @@ NSString *const _Nonnull MoyafErrorDomain = @"MoyafErrorDomain";
             self.success = YES;
         }
     }
-    else {
-        NSError *error = [NSError errorWithDomain:MoyafErrorDomain
-                                             code:MoyafErrorParseError
-                                         userInfo:nil];
-        self = [self initWithError:error];
-    }
     
     return self;
 }
 
 - (nonnull instancetype)initWithValue:(nonnull id)value api:(nonnull id<MoyafApiProtocol>)api {
-    self = [self initWithValue:value];
-    if (self && self.success) {
-        id model = [api parseFromJson:value];
-        if (model) {
-            self.value = model;
-        }
+    id model = [api parseFromResponse:value];
+    if (model) {
+        return [self initWithValue:model];
     }
-    return self;
+    else {
+        return [self initWithError:[NSError errorWithDomain:MoyafErrorDomain
+                                                       code:MoyafErrorParseError
+                                                   userInfo:nil]];
+    }
 }
 
 - (nonnull instancetype)initWithError:(nonnull NSError *)error {

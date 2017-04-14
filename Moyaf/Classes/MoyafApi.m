@@ -21,6 +21,7 @@
 @implementation MoyafApi
 
 - (nullable instancetype)init NS_UNAVAILABLE {
+    [NSException raise:@"MoyafExceptionNonAvailableInitializer" format:@"you need to use designated initializers"];
     return nil;
 }
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
@@ -42,8 +43,8 @@
     return self;
 }
 
-- (nullable id)parseFromJson:(nullable id)json {
-    return nil;
+- (nullable id)parseFromResponse:(nullable id)response {
+    return response;
 }
 
 - (nullable id)mock {

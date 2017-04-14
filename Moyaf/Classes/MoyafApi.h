@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, MoyafApiMethodType) {
 @optional
 - (nullable NSDictionary *)parameters;
 
-- (nullable id)parseFromJson:(nullable id)json;
+- (nullable id)parseFromResponse:(nullable id)response;
 - (nullable id)mock;
 @end
 
@@ -41,14 +41,16 @@ typedef NS_ENUM(NSInteger, MoyafApiMethodType) {
 @property (strong, nonatomic, nullable, readonly) NSDictionary *parameters;
 
 
+- (nullable instancetype)init NS_UNAVAILABLE;
+
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
                                   path:(nonnull NSString *)path;
 
 - (nonnull instancetype)initWithMethod:(MoyafApiMethodType)method
                                   path:(nonnull NSString *)path
-                            parameters:(nullable NSDictionary *)parameters;
+                            parameters:(nullable NSDictionary *)parameters NS_DESIGNATED_INITIALIZER;
 
-- (nullable id)parseFromJson:(nullable id)json;
+- (nullable id)parseFromResponse:(nullable id)response;
 - (nullable id)mock;
 @end
 

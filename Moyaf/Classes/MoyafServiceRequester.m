@@ -20,8 +20,9 @@
 
 @implementation MoyafServiceRequester
 
-- (nonnull instancetype)init {
-    return [self initWithBaseUrl:@""];
+- (nullable instancetype)init NS_UNAVAILABLE {
+    [NSException raise:@"MoyafExceptionNonAvailableInitializer" format:@"you need to use designated initializers"];
+    return nil;
 }
 
 - (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl {

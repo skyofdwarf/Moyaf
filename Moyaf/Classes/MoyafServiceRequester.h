@@ -31,5 +31,5 @@ typedef void (^MoyafRequestCanceller)();
 @interface MoyafServiceRequester: NSObject <MoyafServiceRequesterProtocol>
 @property (strong, nonatomic, nonnull, readonly) AFHTTPSessionManager *manager;
 
-- (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl;
+- (nonnull instancetype)initWithBaseUrl:(nonnull NSString *)baseUrl NS_DESIGNATED_INITIALIZER;
 @end

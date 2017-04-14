@@ -21,7 +21,8 @@
 
 @implementation MoyafService
 
-- (nullable instancetype)init UNAVAILABLE_ATTRIBUTE {
+- (nullable instancetype)init NS_UNAVAILABLE {
+    [NSException raise:@"MoyafExceptionNonAvailableInitializer" format:@"you need to use designated initializers"];
     return nil;
 }
 

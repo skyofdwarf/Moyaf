@@ -36,9 +36,9 @@ typedef NS_ENUM(NSInteger, MoyafErrorCodeType) {
 + (nonnull instancetype)resultWithError:(nonnull NSError *)error;
 + (nonnull instancetype)resultWithValue:(nonnull id)value api:(nonnull id<MoyafApiProtocol>)api;
 
-- (nonnull instancetype)initWithValue:(nonnull Value)value;
+- (nonnull instancetype)initWithValue:(nonnull Value)value NS_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(nonnull Value)value api:(nonnull id<MoyafApiProtocol>)api;
-- (nonnull instancetype)initWithError:(nonnull NSError *)error;
+- (nonnull instancetype)initWithError:(nonnull NSError *)error NS_DESIGNATED_INITIALIZER;
 @end
 
 
