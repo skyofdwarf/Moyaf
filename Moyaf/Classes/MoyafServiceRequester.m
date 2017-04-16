@@ -42,7 +42,6 @@
         case MoyafApiMethodGet: {
             NSURLSessionDataTask * task = [self.manager GET:api.path
                                                  parameters:api.parameters
-                                                   progress:nil
                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                         MoyafResult *result = [MoyafResult resultWithValue:responseObject api:api];
                                                         if (completion)
@@ -58,7 +57,6 @@
         case MoyafApiMethodPost: {
             NSURLSessionDataTask * task = [self.manager POST:api.path
                                                   parameters:api.parameters
-                                                    progress:nil
                                                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                          MoyafResult *result = [MoyafResult resultWithValue:responseObject api:api];
                                                          if (completion)
